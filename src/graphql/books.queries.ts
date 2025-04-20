@@ -30,3 +30,15 @@ export const GET_BOOK_BY_ID = gql`
     }
   }
 `;
+
+export const CREATE_BOOK = gql`
+  mutation CreateBook($data: CreateBookInput!) {
+    addBook(data: $data) {
+      id
+      title
+      author {
+        name
+      }
+    }
+  }
+`;
